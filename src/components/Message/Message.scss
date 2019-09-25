@@ -6,12 +6,10 @@
 
 .message {
   &__content {
-    & > div {
-      display: flex;
-      max-width: 440px;
-      margin-bottom: 15px;
-      position: relative;
-    }
+    display: flex;
+    max-width: 440px;
+    margin-bottom: 15px;
+    position: relative;
   }
 
   &__avatar {
@@ -26,7 +24,7 @@
       width: 33px;
       height: 33px;
       margin-right: 13px;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
   }
   &__bubble {
@@ -49,11 +47,33 @@
     color: #fff;
     line-height: 20px;
   }
-  &__icon-readed{
+  &__attachments {
+    display: flex;
+    margin-bottom: 5px;
+    &-items {
+      margin-right: 5px;
+      cursor: pointer;
+      img {
+        width: 45px;
+        height: 45px;
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+      }
+    }
+  }
+
+  &__icon-readed {
     position: absolute;
-    bottom: 20px;
+    bottom: 22px;
     left: -25px;
   }
+  &--no {
+    left: -20px;
+  }
+
   &--isme {
     display: flex;
     flex-direction: row-reverse;
@@ -75,10 +95,9 @@
     }
 
     .message__info {
-      display: flex;
-      align-items: center;
       text-align: right;
     }
+
     .message__bubble {
       background: #ffffff;
       border: 1px solid #ececec;
